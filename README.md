@@ -1,52 +1,67 @@
 # Project Name
-> Outline a brief description of your project.
+> Prediction of Demand for Shared Bikes
 
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
+* [Regression Analysis](#regression-analysis)
 * [Conclusions](#conclusions)
 * [Acknowledgements](#acknowledgements)
 
-<!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+- This project involves building a multiple linear regression model to predict the demand for shared bikes.
+- **Business Problem:** BoomBikes, a US-based bike-sharing service, has experienced revenue drops during the COVID-19 pandemic. To prepare for post-pandemic demand, the company wants to identify factors affecting bike demand and use them to strategize effectively.
+- **Dataset Used:** The dataset contains daily bike demand data with variables such as weather conditions, seasonal effects, and temporal factors (e.g., year, month).
+- The goal is to analyze how different variables influence bike demand (`cnt`) and create a predictive model to guide business decisions.
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+## Regression Analysis
+### Problem Statement:
+- A bike-sharing system allows short-term bike rentals, often through computer-controlled docks. BoomBikes aims to understand the factors driving demand for its services in the American market post-quarantine.
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+### Key Objectives:
+1. Identify significant variables affecting demand.
+2. Understand how well these variables explain the variations in demand.
+
+### Summary of OLS Regression Results:
+- **Dependent Variable:** Total demand (`cnt`)
+- **Adjusted R-squared:** 0.823 (Model explains 82.3% of the variance in bike demand)
+- **Significant Predictors:**
+  - Positive Effects: `yr`, `temp`, `summer`, `winter`
+  - Negative Effects: `hum`, `windspeed`, `Light Snow`, `Mist`, `Monday`, `Sunday`
+- **Residual Diagnostics:**
+  - Durbin-Watson: 2.011 (No significant autocorrelation)
+  - Omnibus: Residuals show some deviation from normality.
+- **VIF Analysis:** No multicollinearity issues (all VIFs < 5).
+
+### Recommendations:
+- Retain all predictors as they are statistically significant and show minimal multicollinearity.
+- Further refine the model through residual analysis and cross-validation.
 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+- Python 3.8+
+- Pandas
+- NumPy
+- Statsmodels
+- Matplotlib
+- Scikit-learn
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+
+## Conclusions
+- The model successfully identifies significant predictors of bike demand and explains 82.3% of the variance.
+- Meteorological variables (`temp`, `hum`, `windspeed`, `weather conditions`) and temporal factors (`yr`, `season`) significantly influence demand.
+- Insights can help BoomBikes adjust pricing strategies, marketing campaigns, and operational planning to optimize revenue.
+
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+- This project was inspired by the Linear Regression assignment from the IIIT Bangalore program.
+- Dataset provided by BoomBikes.
+- References: Statsmodels documentation, Scikit-learn tutorials.
 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@nigamreetesh] - feel free to contact me for any questions or collaboration opportunities.
 
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
