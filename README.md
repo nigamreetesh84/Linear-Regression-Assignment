@@ -63,5 +63,5 @@
 
 
 ## Contact
-Created by [@nigamreetesh] - feel free to contact me for any questions or collaboration opportunities.
+Created by [Reetesh Nigam] - feel free to contact me for any questions or collaboration opportunities.
 
